@@ -8,7 +8,8 @@ def index(request):
     if request.method == 'POST':
         city = request.POST['city']
         api_key = '9dacc9f8b3471f2472fc847bd5f51142'
-        
+
+        #Error checking 
         try:
             url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&APPID={api_key}'
             res = urllib.request.urlopen(url).read()
